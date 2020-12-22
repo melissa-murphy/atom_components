@@ -1,27 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import  GlobalStyles  from './global_styles/GlobalStyles';
+import { lightTheme, darkTheme } from './global_styles/theme';
 
-function App() {
+const App = () => {
+  const [theme, setTheme] = useState('light');
+  const switchTheme = () =>  theme === 'light' ? setTheme('dark') : setTheme('light');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <>
+        <GlobalStyles />
+        <button type="button" onClick={switchTheme}>Switch Theme</button>
+      </>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
