@@ -8,9 +8,10 @@ export const lightTheme = {
   dark: 'black',
   light: 'whitesmoke',
   display: 'cyan',
-  text: 'slategray',
+  text: 'black',
   stroke: 'black',
   body: 'whitesmoke',
+  //   box-shadow: '',
 };
 
 export const darkTheme = {
@@ -23,6 +24,7 @@ export const darkTheme = {
   text: 'whitesmoke',
   stroke: 'dimgray',
   body: 'black',
+  //   box-shadow: '',
 };
 
 export const fonts = {
