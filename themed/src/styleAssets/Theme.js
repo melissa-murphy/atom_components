@@ -2,9 +2,36 @@ import React, { useContext } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { ThemeContext } from "../contexts/ThemeStore";
 
+const palette = {
+  main: {
+    primary: "#afbdc4",
+    secondary: "#546e7a",
+    error: "#ff5722",
+    warning: "#ffb74d",
+    info: "#81d4fa",
+    success: "#81c784",
+  },
+  light: {
+    primary: "#e1eff7",
+    secondary: "#819ca9",
+  },
+  dark: {
+    primary: "#808d94",
+    secondary: "#29434e",
+  },
+};
+
 const themes = {
-  light: { background: "white" },
-  dark: { background: "grey" },
+  light: {
+    background: palette.light.primary,
+    text: palette.dark.secondary,
+    highlight: palette.main.info,
+  },
+  dark: {
+    background: palette.dark.secondary,
+    text: palette.light.primary,
+    highlight: palette.main.info,
+  },
 };
 
 const GlobalStyle = createGlobalStyle`

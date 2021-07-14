@@ -8,7 +8,7 @@ const App = () => {
     <ThemeStore>
       <Theme>
         <Container>
-          <div>Hello</div>
+          <h1>Themed Components</h1>
         </Container>
       </Theme>
     </ThemeStore>
