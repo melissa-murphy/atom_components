@@ -3,8 +3,8 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { ThemeContext } from "../contexts/ThemeStore";
 
 const themes = {
-  light: {},
-  dark: {},
+  light: { background: "white" },
+  dark: { background: "grey" },
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -364,7 +364,7 @@ transition: all 1s;
 `;
 
 const Theme = ({ children }) => {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <ThemeProvider theme={themes[theme]}>
       <GlobalStyle />
