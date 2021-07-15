@@ -38,6 +38,9 @@ const themes = {
 
 const GlobalStyle = createGlobalStyle`
   transition: all 1s;
+  div, p {
+    margin: 0.25rem;
+  }
 `;
 
 const Theme = ({ children }) => {
