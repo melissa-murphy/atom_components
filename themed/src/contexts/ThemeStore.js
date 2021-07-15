@@ -6,7 +6,7 @@ const ThemeContext = React.createContext();
 
 const ThemeStore = ({ children }) => {
   // default state
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   //   switch state
   const toggleTheme = (theme) => setTheme(theme);
 
