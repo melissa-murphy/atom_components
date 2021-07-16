@@ -1,7 +1,7 @@
 import React from "react";
 import Theme from "./styleAssets/Theme";
 import { ThemeStore } from "./contexts/ThemeStore";
-import { Container, Column, Row, Button } from "./components";
+import { Container, Button } from "./components";
 
 const App = () => {
   return (
@@ -11,10 +11,10 @@ const App = () => {
           <h1>Themed Components</h1>
         </Container>
         <Container>
-          <Row>
+          <Container>
             <h2>Row Component</h2>
-          </Row>
-          <Column width={"25%"}>
+          </Container>
+          <Container column two>
             <h2>Column Component</h2>
             <div>
               <p>
@@ -34,8 +34,8 @@ const App = () => {
                 Quis commodo odio aenean sed adipiscing.
               </p>
             </div>
-          </Column>
-          <Column width={"50%"}>
+          </Container>
+          <Container column two>
             <h2>Column Component</h2>
             <div>
               <p>
@@ -55,13 +55,20 @@ const App = () => {
                 Quis commodo odio aenean sed adipiscing.
               </p>
             </div>
-          </Column>
+          </Container>
         </Container>
         <Container>
-          <h2>Buttons</h2>
-          <Row>
-            <Button info>Button</Button>
-          </Row>
+          <Container>
+            <h2>Buttons</h2>
+          </Container>
+          <Container three>
+            <Button>Primary Button</Button>
+            <Button secondary>Secondary Button</Button>
+            <Button info>Info Button</Button>
+            <Button success>Success Button</Button>
+            <Button warning>Warning Button</Button>
+            <Button error>Error Button</Button>
+          </Container>
         </Container>
       </Theme>
     </ThemeStore>

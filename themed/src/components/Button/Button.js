@@ -2,15 +2,17 @@ import styled from "styled-components";
 
 const Button = styled.button`
   background-color: ${(props) =>
-    props.primary
-      ? props.theme.primary
-      : props.secondary
+    props.secondary
       ? props.theme.secondary
       : props.info
       ? props.theme.info
       : props.success
       ? props.theme.success
-      : props.theme.error};
+      : props.warning
+      ? props.theme.warning
+      : props.error
+      ? props.theme.error
+      : props.theme.primary};
 `;
 
 export default Button;
