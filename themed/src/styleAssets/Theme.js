@@ -24,6 +24,12 @@ const palette = {
 
 const themes = {
   light: {
+    primary: palette.primary,
+    secondary: palette.secondary,
+    error: palette.error,
+    warning: palette.warning,
+    info: palette.info,
+    success: palette.success,
     background: palette.light.primary,
     highlight: palette.info,
     text: palette.dark.secondary,
