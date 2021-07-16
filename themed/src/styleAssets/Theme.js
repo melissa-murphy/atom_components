@@ -43,10 +43,8 @@ const themes = {
 };
 
 const GlobalStyle = createGlobalStyle`
+  max-width:99vw;
   transition: all 1s;
-  div, p {
-    margin: 0.25rem;
-  }
 `;
 
 const Theme = ({ children }) => {
